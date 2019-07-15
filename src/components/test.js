@@ -1,0 +1,1 @@
+export const THIS_TYPE = 'THIS_TYPE'
