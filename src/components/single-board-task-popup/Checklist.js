@@ -84,8 +84,11 @@ const AddItemFormBottomPanel = styled.div`
 const AddItemFormSubmitButton = styled.button`
     padding: 7px;
     margin-right: 5px;
-    background-color: green;
+    background-color: ${variables.greenButtonColor};
     color: white;
+    :hover {
+        background-color: ${variables.greenButtonHoverColor}
+    }
 `;
 
 const CloseAddItemForm = styled.span`
@@ -167,7 +170,11 @@ export class Checklist extends Component {
             if (checklistItem.checked)
                 checkedCount++;
         })
-        return Math.round(checkedCount / numberOfCheckboxes * 100);
+        let percentage = Math.round(checkedCount / numberOfCheckboxes * 100);
+        if ( !percentage ) {
+            percentage = 0;
+        }
+        return percentage;
     }
 
     getProgressBarFillColor = () => {

@@ -44,6 +44,7 @@ const CommentTextarea = styled.textarea`
 `;
 const SaveButton = styled.button`
     padding: 10px;
+    color: black;
 `;
 
 const inactiveButton = {
@@ -51,7 +52,8 @@ const inactiveButton = {
 }
 
 const activeButton = {
-    backgroundColor: 'green'
+    backgroundColor: `${variables.greenButtonColor}`,
+    color: 'white'
 }
 
 export class AddComment extends Component {

@@ -1,7 +1,7 @@
 import React , {PureComponent} from 'react'
 import styled from 'styled-components'
 import { DateTime } from 'luxon';
-
+import variables from 'variables';
 
 import ActivityUserDPPopup from 'components/floated-popup-system/single-board-task-popup/ActivityUserDPPopup';
 
@@ -80,8 +80,11 @@ const EditFormBottomPanel = styled.div`
 const SaveButton = styled.button`
     padding: 5px;
     color: white;
-    background-color: green;
+    background-color: ${variables.greenButtonColor}
     margin-left: 5px;
+    :hover {
+        background-color: ${variables.greenButtonHoverColor}
+    }
 `;
 const CloseEditFormIcon = styled.span`
     font-size: 18px;
