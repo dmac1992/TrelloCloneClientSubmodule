@@ -214,7 +214,6 @@ export class HomeFeedItem extends Component {
             )
         }
     }
-
     renderDescriptionExists = () => {
         if (this.props.task.description)
             return ( <DescriptionIcon className='icon-align-left' />)
@@ -312,7 +311,7 @@ export class HomeFeedItem extends Component {
 const mapStateToProps = (state, ownProps) => {
 
     let task = state.tasks.find(task => ownProps.comment.taskID === task.ID);
-
+    
     return {
         task,
         board: state.boards.find(board => board.id === task.boardID),

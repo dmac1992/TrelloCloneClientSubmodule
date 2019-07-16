@@ -6,31 +6,31 @@ import { CHECKLIST } from '../actions/types';
 
 let testData = [
     {
-        id: 0,
-        checklistID: 0,
+        id: '0',
+        checklistID: '0',
         name: 'checklist item name',
         checked: true,
         created: DateTime.local()
     },
    
     {
-        id: 1,
-        checklistID: 0,
+        id: '1',
+        checklistID: '0',
         name: 'checklist item name',
         checked: false,
         created: DateTime.local()
     },
     {
-        id: 2,
-        checklistID: 1,
+        id: '2',
+        checklistID: '1',
         name: 'checklist item name',
         checked: false,
         created: DateTime.local()
     },
    
     {
-        id: 3,
-        checklistID: 1,
+        id: '3',
+        checklistID: '1',
         name: 'checklist item name',
         checked: false,
         created: DateTime.local()

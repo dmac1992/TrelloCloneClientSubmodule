@@ -3,27 +3,27 @@ import { DateTime } from 'luxon';
 
 let testData = [
     {
-        id: 0,
+        id: '0',
         name: 'checklist name',
-        taskID: 0,
+        taskID: '0',
         created: DateTime.local()
     },
     {
-        id: 1,
+        id: '1',
         name: 'checklist name',
-        taskID: 3,
+        taskID: '3',
         created: DateTime.local()
     },
     {
-        id: 2,
+        id: '2',
         name: 'checklist name',
-        taskID: 4,
+        taskID: '4',
         created: DateTime.local()
     },
     {
-        id: 3,
+        id: '3',
         name: 'checklist name',
-        taskID: 7,
+        taskID: '7',
         created: DateTime.local()
     },
 ];

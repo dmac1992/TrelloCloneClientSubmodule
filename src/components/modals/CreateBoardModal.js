@@ -118,7 +118,6 @@ const SubmitButton = styled.button`
   background-color: $grayscale;
   padding: 7.5px 15px;
   cursor: not-allowed;
-
 `;
 
 export class CreateBoardModal extends Component {
@@ -176,7 +175,7 @@ export class CreateBoardModal extends Component {
   renderColorOptions = () => {
     return variables.boardColorOptions.map(colorOption => {
       return (
-        <GridColor style={{backgroundColor: colorOption}} onClick={this.clickColorOption}/>
+        <GridColor style={{backgroundColor: colorOption}} onClick={this.clickColorOption} key={colorOption}/>
       )
     })
   }

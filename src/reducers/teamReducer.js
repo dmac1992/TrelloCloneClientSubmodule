@@ -2,19 +2,19 @@ import { TEAM } from 'actions/types';
 
 const testState = [
     {
-        id: 0,
+        id: '0',
         name: 'team A',
         description: '',
         users: [ 0, 1, 2 ]
     },
     {
-        id: 1,
+        id: '1',
         name: 'team B',
         description: '',
         users: [ 0, 1 ]
     },
     {
-        id: 2,
+        id: '2',
         name: 'team C',
         description: '',
         users: [0]

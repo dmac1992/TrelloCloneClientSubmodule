@@ -4,57 +4,57 @@ import { DateTime } from 'luxon';
 
 let testData = [
     {
-        id: 0,
-        taskID: 0,
-        userID: 0,
+        id: '0',
+        taskID: '0',
+        userID: '0',
         type: ACTIVITY_TYPES.MARKED,
         entityName: 'sdf',
         timestamp: DateTime.local()
     },
     {
-        id: 1,
-        taskID: 0,
-        userID: 1,
+        id: '1',
+        taskID: '0',
+        userID: '1',
         type: ACTIVITY_TYPES.REMOVED,
         entityName: 'sdf',
         timestamp: DateTime.local()
     },
     {
-        id: 2,
-        taskID: 0,
-        userID: 2,
+        id: '2',
+        taskID: '0',
+        userID: '2',
         type: ACTIVITY_TYPES.REMOVED,
         entityName: 'sdf',
         timestamp: DateTime.local()
     },
     {
-        id: 3,
-        taskID: 0,
-        userID: 2,
+        id: '3',
+        taskID: '0',
+        userID: '2',
         type: ACTIVITY_TYPES.COMPLETED,
         entityName: 'sdf',
         timestamp: DateTime.local()
     },
     {
-        id: 4,
-        taskID: 0,
-        userID: 1,
+        id: '4',
+        taskID: '0',
+        userID: '1',
         type: ACTIVITY_TYPES.COMPLETED,
         entityName: 'sdf',
         timestamp: DateTime.local()
     },
     {
-        id: 5,
-        taskID: 0,
-        userID: 0,
+        id: '5',
+        taskID: '0',
+        userID: '0',
         type: ACTIVITY_TYPES.UNMARKED,
         entityName: 'sdf',
         timestamp: DateTime.local()
     },
     {
-        id: 6,
-        taskID: 0,
-        userID: 0,
+        id: '6',
+        taskID: '0',
+        userID: '0',
         type: ACTIVITY_TYPES.ADDED,
         entityName: 'sdf',
         timestamp: DateTime.local()

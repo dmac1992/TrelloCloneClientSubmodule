@@ -107,8 +107,6 @@ class Header extends React.PureComponent {
         this.props.setActiveRightPopUp(MenuPopup);
     }
 
-    
-
     render() {
         //current active popups on store
         const { activeLeftPopUp, activeRightPopUp } = this.props;

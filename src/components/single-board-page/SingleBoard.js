@@ -17,7 +17,6 @@ import BoardHeaderChangePrivacyFloatingPopup from 'components/floated-popup-syst
 import BoardHeaderChangeAdminLevelFloatingPopup from 'components/floated-popup-system/single-board-header/BoardHeaderChangeAdminLevelFloatingPopup';
 import CloseBoardFloatingPopup from 'components/floated-popup-system/slide-out-menu/SlideCloseBoardFloatingPopup';
 
-
 const Container = styled.div`
     height: calc(100vh - 35px);
 `;
@@ -89,7 +88,7 @@ class SingleBoard extends PureComponent {
 
     renderSprintBoards = () => {
         return this.props.sprints
-            .filter((sprint) => sprint.boardID === Number(this.props.match.params.id))
+            .filter((sprint) => sprint.boardID === this.props.match.params.id)
             .sort((a, b) => a.boardPosition - b.boardPosition)
             .map((sprint) => <SprintContainer key={sprint.id} sprintID={sprint.id} /> )
     }
@@ -122,12 +121,12 @@ class SingleBoard extends PureComponent {
 }
 // sprints: state.sprints.filter((sprint) => sprint.boardID === boardID),
 
-//TODO - !!!URGENT PERFORMANCE i am returning brand new arrays each time. this is causing re-renders.
 function mapStateToProps(state, ownProps) {
-    const boardID = Number(ownProps.match.params.id);
+    const boardID = ownProps.match.params.id;
     return {
         board: state.boards.find((board) => board.id === boardID),
-        sprints: state.sprints
+        sprints: state.sprints,
+        currentUser: state.users[state.userId]
     }
 }
 

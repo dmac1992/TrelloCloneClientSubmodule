@@ -3,8 +3,8 @@ import { DateTime } from 'luxon';
 
 const testState = [
     {
-        id: 0,
-        adminUserID: 2,
+        id: '0',
+        adminUserID: '2',
         accessibilityLevel: 'private',
         teamID: 0,
         name: 'board 1',
@@ -13,8 +13,8 @@ const testState = [
         closed: false,
     },
     {
-        id: 1,
-        adminUserID: 1,
+        id: '1',
+        adminUserID: '1',
         accessibilityLevel: 'private',
         teamID: null,
         name: 'board 2',
@@ -23,8 +23,8 @@ const testState = [
         close: false,
     },
     {
-        id: 2,
-        adminUserID: 0,
+        id: '2',
+        adminUserID: '0',
         accessibilityLevel: 'public',
         teamID: null,
         name: 'board 3',

@@ -198,7 +198,7 @@ const mapStateToProps = (state, ownProps) => {
         tasks: state.tasks,
         comments: state.comments,
         checklists: state.checklists,
-        checklistItems: state.checklistItem
+        checklistItems: state.checklistItem,
     }
 }
 

@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import variables from 'variables';
 
 import RecentlyViewedBoardItem from 'components/home-page/RecentlyViewedBoardItem';
-
 import { unstarBoard, starBoard } from 'actions/users';
 
 const FeedContainer = styled.div`
@@ -26,7 +25,6 @@ const FeedIcon = styled.span`
   justify-content: center;
   font-size: 15px;
 `
-
 
 const LinksItem = styled.span`
   display: flex;

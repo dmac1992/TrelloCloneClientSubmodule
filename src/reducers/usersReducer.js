@@ -2,7 +2,7 @@ import { USER } from "../actions/types";
 
 const testState = {
   '0': {
-    id: 0,
+    id: '0',
     username: 'pitchgreat',
     fullname: 'Daniel Ryan',
     initial: 'D',
@@ -11,7 +11,7 @@ const testState = {
     starredBoards: [],
   }, 
   '1': {
-    id: 1,
+    id: '1',
     username: 'manicureworkbench',
     fullname: 'Melissa James',
     initial: 'M',
@@ -20,13 +20,13 @@ const testState = {
     starredBoards: [],
   }, 
   '2': {
-    id: 2,
+    id: '2',
     username: 'steevespooky 2',
     fullname: 'Steve Brown',
     initial: 'S',
     Bio: 'This is username id 2s BIO',
-    recentlyViewedBoards: [0, 1],
-    starredBoards: [0],
+    recentlyViewedBoards: ['0', '1'],
+    starredBoards: ['0'],
   }, 
 }
 //TODO - SEPERATE CURRENT USER FROM OTHERS EVENTUALLY, CURRENT USER REQUIRES A WEALTH OF DATA THAT GENERAL USERS CAN DO WITHOUT

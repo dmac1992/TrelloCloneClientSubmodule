@@ -4,48 +4,48 @@ import _ from 'lodash';
 
 const testState = [
     {
-        boardID: 0,
-        id: 1,
+        boardID: '0',
+        id: '1',
         boardPosition: 0,
         name: 'board position 0',
         timestamp: DateTime.local(),
         watched: true
     },
     {
-        boardID: 0,
-        id: 2,
+        boardID: '0',
+        id: '2',
         boardPosition: 1,
         name: 'board position 1',
         timestamp: DateTime.local(),
         watched: false
     },
     {
-        boardID: 0,
-        id: 3,
+        boardID: '0',
+        id: '3',
         boardPosition: 2,
         name: 'board position 2',
         timestamp: DateTime.local(),
         watched: false
     },
     {
-        boardID: 1,
-        id: 4,
+        boardID: '1',
+        id: '4',
         boardPosition: 0,
         name: 'board position 0',
         timestamp: DateTime.local(),
         watched: false
     },
     {
-        boardID: 1,
-        id: 5,
+        boardID: '1',
+        id: '5',
         boardPosition: 1,
         name: 'board position 1',
         timestamp: DateTime.local(),
         watched: false
     },
     {
-        boardID: 1,
-        id: 6,
+        boardID: '1',
+        id: '6',
         boardPosition: 2,
         name: 'board position 2',
         timestamp: DateTime.local(),
