@@ -18,15 +18,21 @@ import BoardHeaderChangeAdminLevelFloatingPopup from 'components/floated-popup-s
 import CloseBoardFloatingPopup from 'components/floated-popup-system/slide-out-menu/SlideCloseBoardFloatingPopup';
 
 const Container = styled.div`
-    height: calc(100vh - 35px);
+    flex-grow: 1;
+    position: relative;
 `;
 
 const BoardsCanvas = styled.div`
-    position: relative;
+    position: absolute;
     overflow-x: scroll;
-    height: calc(100% - 34px);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
     display: flex;
     padding-top: 3px;
+    padding-bottom: 10px;
 `;
 
 class SingleBoard extends PureComponent {
@@ -51,16 +57,7 @@ class SingleBoard extends PureComponent {
         document.body.style.backgroundColor = 'transparent';
     }
 
-    toggleMenu = () => {
-        let SlideMenu = document.querySelector('#board-slide-menu');
-        if (this.state.MenuOpen) {
-            SlideMenu.style.right = '-350px';
-            this.setState({'MenuOpen': false});
-        } else {
-            SlideMenu.style.right = '0px';
-            this.setState({'MenuOpen': true});
-        }
-    }
+  
 
     inviteToBoardHeaderPopup = () => {
         this.props.setFloatingPopup(BoardHeaderInviteFloatingPopup , this.inviteToBoardHeaderButtonRef);
@@ -98,7 +95,6 @@ class SingleBoard extends PureComponent {
         return (
             <Container>
                 <SingleBoardHeader 
-                    toggleMenu={this.toggleMenu} 
                     inviteToBoardPopup={this.inviteToBoardPopup}
                     inviteToBoardButtonRef={this.inviteToBoardButtonRef}
                     addTeamPopup={this.addTeamPopup}

@@ -13,13 +13,13 @@ import { setActiveModal } from 'actions/modal';
 const BoardsPageContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 50px;
 `;
 
 
 const BoardsFeedContainer = styled.div`
     width: 800px;
     margin-left: 30px;
+    padding-top: 50px;
 `;
 
 

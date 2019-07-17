@@ -13,7 +13,8 @@ import { setActiveModal } from 'actions/modal';
 const HomePageContainer = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    flex-grow: 1;
+    overflow-y: auto;
 `;
 
 class Home extends Component {

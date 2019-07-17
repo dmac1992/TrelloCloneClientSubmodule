@@ -130,33 +130,50 @@ function renderPrivacyIcon(accessibilityLevel)  {
 }
 
 
-function SingleBoardHeader(props) {
-    const { board } = props; 
-    return (
-        <Container>
-            <HeadingTab>{board.name}</HeadingTab>
-            <StarTab className='icon-star' />
-            <TeamTab onClick={props.addTeamPopup}  ref={props.addTeamButtonRef}>
-                <span>Personal</span>
-            </TeamTab>
-            <PrivacyTab className='' ref={props.privacySettingsButtonRef} onClick={props.changePrivacySettings}>
-                {renderPrivacyIcon(board.accessibilityLevel)}
-                <span>{board.accessibilityLevel}</span>
-            </PrivacyTab>
-            <BoardCollaboratorsTab>
-                <Collaborator ref={props.userAdminButtonRef} onClick={props.changeUserPermissions}>A</Collaborator>
-                <Collaborator>B</Collaborator>
-                <Collaborator>C</Collaborator>
-            </BoardCollaboratorsTab>
-            <InviteButton onClick={props.inviteToBoardPopup} ref={props.inviteToBoardButtonRef}>
-                Invite
-            </InviteButton>
-            <OpenSlideMenuButton onClick={props.toggleMenu}>Show Menu...</OpenSlideMenuButton>
-            <MenuContainer>
-                <BoardSlideMenuParent toggleMenu={props.toggleMenu} setFloatingPopup={props.setFloatingPopup}/>
-            </MenuContainer>
-        </Container>
-    )
+class SingleBoardHeader extends React.Component {
+   
+    state = {
+        menuVisible : false
+    }
+
+    toggleMenu = () =>  {
+        this.setState({menuVisible: !this.state.menuVisible});
+    }
+
+    render() {
+        const { board } = this.props; 
+        return (
+            <Container>
+                <HeadingTab>{board.name}</HeadingTab>
+                <StarTab className='icon-star' />
+                <TeamTab onClick={this.props.addTeamPopup}  ref={this.props.addTeamButtonRef}>
+                    <span>Personal</span>
+                </TeamTab>
+                <PrivacyTab className='' ref={this.props.privacySettingsButtonRef} onClick={this.props.changePrivacySettings}>
+                    {renderPrivacyIcon(board.accessibilityLevel)}
+                    <span>{board.accessibilityLevel}</span>
+                </PrivacyTab>
+                <BoardCollaboratorsTab>
+                    <Collaborator ref={this.props.userAdminButtonRef} onClick={this.props.changeUserPermissions}>A</Collaborator>
+                    <Collaborator>B</Collaborator>
+                    <Collaborator>C</Collaborator>
+                </BoardCollaboratorsTab>
+                <InviteButton onClick={this.props.inviteToBoardPopup} ref={this.props.inviteToBoardButtonRef}>
+                    Invite
+                </InviteButton>
+                <OpenSlideMenuButton onClick={this.toggleMenu}>Show Menu...</OpenSlideMenuButton>
+                {
+                    this.state.menuVisible ? 
+                    <MenuContainer>
+                        <BoardSlideMenuParent toggleMenu={this.toggleMenu} setFloatingPopup={this.props.setFloatingPopup}/>
+                    </MenuContainer>
+                    : null
+                }
+               
+            </Container>
+        )
+    }
+   
 }
 
 export default SingleBoardHeader

@@ -5,6 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { Route, BrowserRouter } from 'react-router-dom';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import styled from 'styled-components';
 
 
 import reducers from './reducers';
@@ -31,10 +32,16 @@ const store = createStore(
     composeWithDevTools(applyMiddleware(thunk))
 );
 
+const Surface = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+`
+
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
-            <div>
+            <Surface>
                 <ModalPortal />
                 <FloatedPopupPortal />
                 <Header />
@@ -42,7 +49,7 @@ ReactDOM.render(
                 <Route path="/boards" exact component={Boards} />
                 <Route path="/profile" component={Profile} />
                 <Route path='/b/:id' component={SingleBoard} />
-            </div>
+            </Surface>
         </BrowserRouter>
     </Provider>,
     document.querySelector("#root")

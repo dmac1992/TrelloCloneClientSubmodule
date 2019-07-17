@@ -7,9 +7,8 @@ import HomeFeedItem from './HomeFeedItem';
 
 const HomeFeedContainer = styled.div`
     width: 500px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
+    padding: 30px;
+    padding-top: 50px;
 `;
 
 const HomeFeedTitleContainer = styled.div`

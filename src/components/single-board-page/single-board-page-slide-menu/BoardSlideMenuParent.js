@@ -15,7 +15,7 @@ import BoardSlideArchive from './BoardSlideArchive';
 const Container = styled.div`
     position: absolute;
     width: 350px;
-    right: -350px;
+    right: 0;
     height: 100vh;
     background-color: #f4f5f7;
     padding: 0 20px;

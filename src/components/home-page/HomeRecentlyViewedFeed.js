@@ -8,7 +8,8 @@ import { unstarBoard, starBoard } from 'actions/users';
 
 const FeedContainer = styled.div`
   width: 300px;
-  font-family: ${variables.primaryFont}
+  font-family: ${variables.primaryFont};
+  padding-top: 50px;
 `;
 
 const StickyBox = styled.div`

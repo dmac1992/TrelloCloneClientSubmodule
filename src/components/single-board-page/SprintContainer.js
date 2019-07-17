@@ -11,13 +11,11 @@ import { setFloatingPopup } from 'actions/floatingPopups';
 
 import { updateSprintName } from 'actions/sprints'; 
 
-
 const SprintColumn = styled.div`
     min-width: 272px;
     height: 100%;
     margin-left: 5px;
 `
-
 const Container = styled.div`
     width: 100%;
     max-height: 100%;
@@ -25,10 +23,16 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     padding: 5px;
+    margin-bottom: 30px;
     border-radius: 3px;
     margin-right: 5px;
-    overflow: auto;
     font-family: ${variables.primaryFont}
+`;
+
+const TasksContainer = styled.div`
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1 1 auto;
 `;
 
 const SprintHeadingContainer = styled.div`
@@ -38,6 +42,7 @@ const SprintHeadingContainer = styled.div`
     height: 30px;
     line-height: 30px;
     margin-bottom: 6px;
+    flex: 0 0 auto;
 `;
 
 const Heading = styled.textarea`
@@ -54,6 +59,7 @@ const Heading = styled.textarea`
         background-color: white;
     }
 `;
+
 const OpenMenuIcon = styled.span`
     display: inline-block;
     padding: 3px 6px;
@@ -68,12 +74,13 @@ const WatchingIcon = styled.span`
     font-size: 14px;
     position: relative;
     top: 2px;
-`
+`;
 
 
 const AddAnotherCardSection = styled.div`
     height: 30px;
     display: flex;
+    flex: 0 0 auto;
     align-items: center;
     padding: 3px;
     cursor: pointer;
@@ -160,7 +167,9 @@ class SprintContainer extends React.PureComponent {
                         {this.props.sprint.watched ? <WatchingIcon className='icon-eye' /> : null}
                         <OpenMenuIcon className='icon-dot-3' onClick={this.sprintOptionsPopup} ref={this.sprintMenuRef}></OpenMenuIcon>
                     </SprintHeadingContainer>
-                    {this.renderTasks()}
+                    <TasksContainer>
+                        {this.renderTasks()}
+                    </TasksContainer>
                     {!this.state.addCardFormOpen ? this.renderOpenAddCard() : this.renderAddCardForm()}
                  </Container>
             </SprintColumn>

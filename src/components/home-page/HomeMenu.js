@@ -11,7 +11,7 @@ import CreateTeamPopup from 'components/popups/CreateTeamPopup';
 const HomeMenuContainer = styled.div`
     width: 200px;
     font-family: ${variables.primaryFont};
-  
+    padding-top: 50px;
 `;
 
 const HomeMenuList = styled.ul`
