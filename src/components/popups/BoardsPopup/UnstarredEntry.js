@@ -31,10 +31,7 @@ const Star = styled.span`
 
 export class UnstarredBoardEntry extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
+    
     starBoard = (e) => {
         e.preventDefault(); 
         const { currentUser, board } = this.props;

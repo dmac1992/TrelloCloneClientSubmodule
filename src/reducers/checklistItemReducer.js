@@ -2,7 +2,6 @@ import _ from 'lodash';
 
 import { CHECKLIST_ITEM } from 'actions/types';
 import { DateTime } from 'luxon'; 
-import { CHECKLIST } from '../actions/types';
 
 let testData = [
     {

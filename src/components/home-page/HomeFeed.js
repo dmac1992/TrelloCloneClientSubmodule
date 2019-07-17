@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import variables from 'variables';
+import { DateTime } from 'luxon';
 
 import HomeFeedItem from './HomeFeedItem';
 
@@ -46,9 +47,14 @@ class HomeFeed extends React.Component {
 
     renderHomeFeedItems = () => {
       return this.props.comments
-        .sort((a, b) => a > b)
+        .sort((a, b) =>  {
+            if (a.timestamp.toFormat('yyyyMMddHHmmss') > b.timestamp.toFormat('yyyyMMddHHmmss')) 
+              return 1;
+            else
+              return -1;
+        })
         .slice(0,6)
-        .map(comment => <HomeFeedItem comment={comment} key={comment.id} ></HomeFeedItem>)
+        .map(comment => <HomeFeedItem comment={comment} key={comment.id} />)
     }
 
     render() {

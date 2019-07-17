@@ -1,6 +1,5 @@
 import { SPRINTS } from '../actions/types';
 import { DateTime } from 'luxon';
-import _ from 'lodash';
 
 const testState = [
     {

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-import { DateTime } from 'luxon';
 
 import { updateTasks } from 'actions/tasks';
 
@@ -22,7 +21,6 @@ const Title = styled.div`
     margin-bottom: 10px;
 
 `;
-
 
 
 const CloseIcon = styled.span`

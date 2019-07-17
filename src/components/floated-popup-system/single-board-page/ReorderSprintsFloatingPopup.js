@@ -2,10 +2,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import  { withRouter } from 'react-router';
-
 //action handler
 import  { updateSprints } from 'actions/sprints';
-
 
 const Container = styled.div`
     padding: 5px;
@@ -32,7 +30,6 @@ const CloseIcon = styled.span`
 `;
 
 const ReorderForm = styled.form``;
-
 
 const PositionSelectInputContainer = styled.div`
     height: 50px;

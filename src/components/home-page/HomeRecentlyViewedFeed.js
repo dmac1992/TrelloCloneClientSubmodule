@@ -56,26 +56,8 @@ const LinksTitle = styled.span`
   margin-bottom: 10px;
 `;
 
-const FeedMenuItem = styled.span`
-`
 
-const UnstarredIcon = styled.span`
-  color: #dfe1e6;
-  transition: transform .2s;
-  display: inline-block;
-  :hover {
-    transform: scale(1.1);
-  }
-`;
 
-const StarredIcon = styled.span`
-  color: #ffce00
-  transition: transform .2s;
-  display: inline-block;
-  :hover {
-    transform: scale(1.1);
-  }
-`;
 
 class HomeRecentlyViewedFeed extends React.Component {
 

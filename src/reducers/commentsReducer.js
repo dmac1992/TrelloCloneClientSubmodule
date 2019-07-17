@@ -7,7 +7,7 @@ let testData = [
         taskID: '0',
         userID: '0',
         comment: 'Hi, this is my first comment',
-        timestamp: DateTime.local(),
+        timestamp: DateTime.fromISO('2016-05-25T09:16:34.123'),
         lastEdited: null
     },
     {
@@ -15,7 +15,7 @@ let testData = [
         taskID: '1',
         userID: '1',
         comment: 'Hi, this is my second comment',
-        timestamp: DateTime.local(),
+        timestamp: DateTime.fromISO('2016-05-20T09:20:34.123'),
         lastEdited: null
     },
     {
@@ -23,7 +23,7 @@ let testData = [
         taskID: '2',
         userID: '2',
         comment: 'Hi, this is my third comment',
-        timestamp: DateTime.local(),
+        timestamp: DateTime.fromISO('2016-05-20T09:22:30.123'),
         lastEdited: null
     },
     {
@@ -31,7 +31,7 @@ let testData = [
         taskID: '0',
         userID: '0',
         comment: 'Hi, this is my fourth comment',
-        timestamp: DateTime.local(),
+        timestamp: DateTime.fromISO('2016-05-27T09:03:34.123'),
         lastEdited: null
     },
     {
@@ -39,7 +39,7 @@ let testData = [
         taskID: '0',
         userID: '1',
         comment: 'Hi, this is my fifth comment',
-        timestamp: DateTime.local(),
+        timestamp: DateTime.fromISO('2016-05-29T09:08:34.123'),
         lastEdited: null
     },
     {
@@ -47,7 +47,7 @@ let testData = [
         taskID: '0',
         userID: '1',
         comment: 'Hi, this is my fifth comment',
-        timestamp: DateTime.local(),
+        timestamp: DateTime.fromISO('2016-05-31T09:13:30.123'),
         lastEdited: null
     },
     {
@@ -55,7 +55,7 @@ let testData = [
         taskID: '8',
         userID: '1',
         comment: 'Hi, this is my fifth comment',
-        timestamp: DateTime.local(),
+        timestamp: DateTime.fromISO('2016-05-19T09:03:20.123'),
         lastEdited: null
     },
     

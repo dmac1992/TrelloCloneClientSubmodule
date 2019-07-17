@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 
 import HomeMenu from 'components/home-page/HomeMenu';
-import TeamsFeed from 'components/boards-page/TeamsFeed'; 
-import CreateBoardModal from 'components/modals/CreateBoardModal';
 import BoardsPersonalFeed from 'components/boards-page/BoardsPersonalFeed';
 import BoardsRecentFeed  from './BoardsRecentFeed';
 import BoardsStarredFeed from './BoardsStarredFeed';
@@ -24,15 +22,6 @@ const BoardsFeedContainer = styled.div`
     margin-left: 30px;
 `;
 
-const CreateNewBoard = styled.div`
-    display: flex;
-    width: 250px
-    height: 100px;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-    cursor: pointer;
-`;
 
 export class Boards extends Component {
   render() {
@@ -43,13 +32,7 @@ export class Boards extends Component {
             <BoardsStarredFeed />
             <BoardsPersonalFeed />
             <BoardsRecentFeed />
-            {/* TODO - what to do with these, implement at a later date.  */}
-            {/* <TeamsFeed />
-            <TeamsFeed />
-            <TeamsFeed /> */}
-            {/* <CreateNewBoard onClick={() => this.props.setActiveModal(CreateBoardModal)}>
-              <span>Create board...</span>
-            </CreateNewBoard> */}
+            
         </BoardsFeedContainer>
       
       </BoardsPageContainer>
