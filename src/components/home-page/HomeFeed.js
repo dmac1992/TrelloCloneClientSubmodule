@@ -10,6 +10,7 @@ const HomeFeedContainer = styled.div`
     width: 500px;
     padding-left: 30px;
     padding-right: 30px;
+    padding-bottom: 30px;
 `;
 
 const HomeFeedTitleContainer = styled.div`
@@ -35,7 +36,7 @@ const ShowMoreButton = styled.div`
     border-radius: 5px;
     cursor: pointer;
     &:hover {
-        background-color: #DCDCDC;
+        background-color: ${variables.lightGrayscale}
     }
 `;
 

@@ -10,11 +10,14 @@ import CreateTeamPopup from 'components/popups/CreateTeamPopup';
 
 const HomeMenuContainer = styled.div`
     width: 200px;
-    font-family: ${variables.primaryFont}
+    font-family: ${variables.primaryFont};
+  
 `;
 
 const HomeMenuList = styled.ul`
     list-style-type: none;
+    position: sticky;
+    top: 0;
 `;
 
 const HomeMenuListItem = styled.li`

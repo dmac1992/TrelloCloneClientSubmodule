@@ -11,6 +11,11 @@ const FeedContainer = styled.div`
   font-family: ${variables.primaryFont}
 `;
 
+const StickyBox = styled.div`
+  position: sticky;
+  top: 0;
+`;
+
 const FeedTitleContainer = styled.div`
   display: flex;
   align-items: center;
@@ -106,39 +111,40 @@ class HomeRecentlyViewedFeed extends React.Component {
       const {createBoardModal, currentUser} = this.props;
       return (
         <FeedContainer>
-          <FeedTitleContainer>
-            <FeedIcon className="icon-clock-o"></FeedIcon>
-            <span className="home-recently-title">RECENTLY VIEWED</span>
-          </FeedTitleContainer>
-          <ul className="home-recently-viewed-ul">
-            {this.renderRecentlyViewedBoards()}
-          </ul>
+          <StickyBox>
+            <FeedTitleContainer>
+              <FeedIcon className="icon-clock-o"></FeedIcon>
+              <span className="home-recently-title">RECENTLY VIEWED</span>
+            </FeedTitleContainer>
+            <ul className="home-recently-viewed-ul">
+              {this.renderRecentlyViewedBoards()}
+            </ul>
 
-          { currentUser.starredBoards.length  ?
-            (
-              <>
-                <FeedTitleContainer>
-                    <FeedIcon className="icon-star"></FeedIcon>
-                    <span className="home-recently-title">STARRED</span>
-                </FeedTitleContainer>
-                <ul className=''>
-                  {this.renderStarredBoards()}
-                </ul>
-              </>
-              )
-              :
-              null
-          }
-         
-        
-          <ul className="home-recently-viewed-links-ul">
-            <LinksTitle>Links</LinksTitle>
-            <LinksItem onClick={createBoardModal}>
-              <span className="home-recently-viewed-link-icon icon-plus"></span>
-              <span className="home-recently-viwed-link-text">Create a board</span>
-            </LinksItem>
-          </ul>
-
+            { currentUser.starredBoards.length  ?
+              (
+                <>
+                  <FeedTitleContainer>
+                      <FeedIcon className="icon-star"></FeedIcon>
+                      <span className="home-recently-title">STARRED</span>
+                  </FeedTitleContainer>
+                  <ul className=''>
+                    {this.renderStarredBoards()}
+                  </ul>
+                </>
+                )
+                :
+                null
+            }
+          
+          
+            <ul className="home-recently-viewed-links-ul">
+              <LinksTitle>Links</LinksTitle>
+              <LinksItem onClick={createBoardModal}>
+                <span className="home-recently-viewed-link-icon icon-plus"></span>
+                <span className="home-recently-viwed-link-text">Create a board</span>
+              </LinksItem>
+            </ul>
+            </StickyBox>
         </FeedContainer>
       )
     }
