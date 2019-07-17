@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import variables from 'variables';
-import { DateTime } from 'luxon';
 
 import HomeFeedItem from './HomeFeedItem';
 
@@ -43,7 +42,7 @@ const ShowMoreButton = styled.div`
 class HomeFeed extends React.Component {
 
     state = {
-
+      commentsShowing: 3
     }
 
     renderHomeFeedItems = () => {
@@ -54,9 +53,13 @@ class HomeFeed extends React.Component {
             else
               return -1;
         })
-        .slice(0,6)
+        .slice(0, this.state.commentsShowing)
         .map(comment => <HomeFeedItem comment={comment} key={comment.id} />)
     }
+
+    showMoreComments = () => {
+      this.setState({commentsShowing: this.state.commentsShowing + 3});
+    } 
 
     render() {
       return (
@@ -66,7 +69,7 @@ class HomeFeed extends React.Component {
             <Title>UP NEXT</Title>
           </HomeFeedTitleContainer>
          {this.renderHomeFeedItems()}
-          <ShowMoreButton>
+          <ShowMoreButton onClick={this.showMoreComments}>
               <span>Show more</span>
           </ShowMoreButton>
         </HomeFeedContainer>
